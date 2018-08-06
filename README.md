@@ -1,7 +1,7 @@
 # Sandwich Club Project Starter Code
 
 ## Project Overview
-In this project, you will complete the **Sandwich Club** app to
+In this project, I completed the **Sandwich Club** app to
 show the details of each sandwich once it is selected.
 
 ## Why this Project
@@ -12,7 +12,7 @@ done using libraries, writing the JSON parsing for  this project will
 help you to better understand how it is processed.
 
 ## What Will I Learn?
-Through this project, you will:
+Through this project, I had to learn:
 - Learn how to submit projects for review
 - Practice JSON parsing to a model object
 - Design an activity layout
