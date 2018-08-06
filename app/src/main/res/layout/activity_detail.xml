@@ -132,30 +132,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guide4" />
 
-    <ScrollView
-        android:id="@+id/scrollDescription"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/guide2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guide6"
-        app:layout_constraintTop_toTopOf="@+id/guide1">
-
-        <TextView
-            android:id="@+id/description_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:gravity="left"
-            android:singleLine="false"
-            app:layout_constraintBottom_toTopOf="@+id/guide2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guide6"
-            app:layout_constraintTop_toTopOf="@+id/guide1"
-            tools:text="@string/detail_description_label" />
-    </ScrollView>
-
 
     <TextView
         android:id="@+id/also_known_tv"
@@ -218,5 +194,31 @@
             app:layout_constraintTop_toTopOf="@+id/guide3"
             tools:text="@string/detail_ingredients_label" />
 
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guide2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@+id/guide1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="left"
+            android:singleLine="false"
+            app:layout_constraintBottom_toTopOf="@+id/guide2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guide6"
+            app:layout_constraintTop_toTopOf="@+id/guide1"
+            tools:text="@string/detail_description_label" />
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
