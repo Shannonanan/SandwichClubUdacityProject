@@ -6,83 +6,219 @@
     android:layout_height="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
+
     <ImageView
         android:id="@+id/image_iv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
         android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/guide1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
 
     <TextView
         android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
         android:text="@string/detail_place_of_origin_label"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintBottom_toTopOf="@+id/guide5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@+id/guide4" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
         android:text="@string/detail_also_known_as_label"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guide3"
+        app:layout_constraintEnd_toStartOf="@+id/guide6"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="267dp" />
+        app:layout_constraintTop_toTopOf="@+id/guide2" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
         android:text="@string/detail_ingredients_label"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guide4"
+        app:layout_constraintEnd_toStartOf="@+id/guide6"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="314dp" />
+        app:layout_constraintTop_toTopOf="@+id/guide3" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
         android:text="@string/detail_place_of_origin_label"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guide5"
+        app:layout_constraintEnd_toStartOf="@+id/guide6"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintTop_toTopOf="@+id/guide4" />
 
-    <TextView
-        android:id="@+id/description_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="218dp"
-        tools:text="@string/detail_description_label" />
-
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="314dp"
-        tools:text="@string/detail_ingredients_label" />
 
     <TextView
         android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="267dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        app:layout_constraintBottom_toTopOf="@+id/guide3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@+id/guide2"
         tools:text="@string/detail_also_known_as_label" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
         android:text="@string/detail_description_label"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guide2"
+        app:layout_constraintEnd_toStartOf="@+id/guide6"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="218dp" />
+        app:layout_constraintTop_toTopOf="@+id/guide1" />
+
+    <ScrollView
+        android:id="@+id/scrollIngredients"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guide4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@+id/guide3"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="left"
+            android:singleLine="false"
+            app:layout_constraintBottom_toTopOf="@+id/guide4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guide6"
+            app:layout_constraintTop_toTopOf="@+id/guide3"
+            tools:text="@string/detail_ingredients_label" />
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guide2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guide6"
+        app:layout_constraintTop_toTopOf="@+id/guide1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="left"
+            android:singleLine="false"
+            app:layout_constraintBottom_toTopOf="@+id/guide2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guide6"
+            app:layout_constraintTop_toTopOf="@+id/guide1"
+            tools:text="@string/detail_description_label" />
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
