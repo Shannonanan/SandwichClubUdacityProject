@@ -3,7 +3,10 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.ImageView;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
@@ -14,6 +17,12 @@ public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
+    TextView tv_description;
+    TextView tv_ingredients;
+    TextView tv_origin;
+    TextView tv_known_as;
+    ScrollView scrollDescription;
+    ScrollView scrollIngredients;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +30,13 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         ImageView ingredientsIv = findViewById(R.id.image_iv);
+        scrollDescription = findViewById(R.id.scrollDescription);
+        tv_description = findViewById(R.id.description_tv);
+        tv_origin = findViewById(R.id.origin_tv);
+        tv_ingredients = findViewById(R.id.ingredients_tv);
+        tv_known_as = findViewById(R.id.also_known_tv);
+        scrollIngredients = findViewById(R.id.scrollIngredients);
+
 
         Intent intent = getIntent();
         if (intent == null) {
@@ -43,7 +59,7 @@ public class DetailActivity extends AppCompatActivity {
             return;
         }
 
-        populateUI();
+        populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
                 .into(ingredientsIv);
@@ -56,7 +72,17 @@ public class DetailActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
-    private void populateUI() {
+    private void populateUI(Sandwich sandwich) {
+        tv_description.setText(sandwich.getDescription());
+        tv_origin.setText(sandwich.getPlaceOfOrigin());
+
+        if(!sandwich.getAlsoKnownAs().isEmpty()){
+        String joinedKnownAs = TextUtils.join(", ", sandwich.getAlsoKnownAs());
+        tv_known_as.setText(joinedKnownAs);}
+        if(!sandwich.getIngredients().isEmpty()){
+        String joinedIngredients = TextUtils.join(", ", sandwich.getIngredients());
+        tv_ingredients.setText(joinedIngredients);};
+
 
     }
 }
