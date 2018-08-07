@@ -46,10 +46,13 @@ public class JsonUtils {
             sandwich.setAlsoKnownAs(alsoKnownAsList);
         } catch (JSONException ex) {
             String temp = ex.getMessage();
+            return null;
         }
 
-
-
-        return sandwich;
+        if(sandwich == null)
+        {
+            return null;
+        }
+       else { return sandwich;}
     }
 }

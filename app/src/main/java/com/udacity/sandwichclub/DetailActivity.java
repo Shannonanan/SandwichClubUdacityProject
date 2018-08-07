@@ -13,31 +13,27 @@ import com.squareup.picasso.Picasso;
 import com.udacity.sandwichclub.model.Sandwich;
 import com.udacity.sandwichclub.utils.JsonUtils;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DetailActivity extends AppCompatActivity {
 
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
-    TextView tv_description;
-    TextView tv_ingredients;
-    TextView tv_origin;
-    TextView tv_known_as;
-    ScrollView scrollDescription;
-    ScrollView scrollIngredients;
+
+    @BindView(R.id.description_tv)TextView tv_description;
+    @BindView(R.id.image_iv)ImageView ingredientsIv;
+    @BindView(R.id.ingredients_tv)TextView tv_ingredients;
+    @BindView(R.id.origin_tv)TextView tv_origin;
+    @BindView(R.id.also_known_tv)TextView tv_known_as;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
-        scrollDescription = findViewById(R.id.scrollDescription);
-        tv_description = findViewById(R.id.description_tv);
-        tv_origin = findViewById(R.id.origin_tv);
-        tv_ingredients = findViewById(R.id.ingredients_tv);
-        tv_known_as = findViewById(R.id.also_known_tv);
-        scrollIngredients = findViewById(R.id.scrollIngredients);
-
-
+        ButterKnife.bind(this);
         Intent intent = getIntent();
         if (intent == null) {
             closeOnError();
