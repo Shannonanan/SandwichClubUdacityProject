@@ -21,11 +21,16 @@ public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
 
-    @BindView(R.id.description_tv)TextView tv_description;
-    @BindView(R.id.image_iv)ImageView ingredientsIv;
-    @BindView(R.id.ingredients_tv)TextView tv_ingredients;
-    @BindView(R.id.origin_tv)TextView tv_origin;
-    @BindView(R.id.also_known_tv)TextView tv_known_as;
+    @BindView(R.id.description_tv)
+    TextView tv_description;
+    @BindView(R.id.image_iv)
+    ImageView ingredientsIv;
+    @BindView(R.id.ingredients_tv)
+    TextView tv_ingredients;
+    @BindView(R.id.origin_tv)
+    TextView tv_origin;
+    @BindView(R.id.also_known_tv)
+    TextView tv_known_as;
 
 
     @Override
@@ -72,12 +77,15 @@ public class DetailActivity extends AppCompatActivity {
         tv_description.setText(sandwich.getDescription());
         tv_origin.setText(sandwich.getPlaceOfOrigin());
 
-        if(!sandwich.getAlsoKnownAs().isEmpty()){
-        String joinedKnownAs = TextUtils.join(", ", sandwich.getAlsoKnownAs());
-        tv_known_as.setText(joinedKnownAs);}
-        if(!sandwich.getIngredients().isEmpty()){
-        String joinedIngredients = TextUtils.join(", ", sandwich.getIngredients());
-        tv_ingredients.setText(joinedIngredients);};
+        if (!sandwich.getAlsoKnownAs().isEmpty()) {
+            String joinedKnownAs = TextUtils.join(", ", sandwich.getAlsoKnownAs());
+            tv_known_as.setText(joinedKnownAs);
+        }
+        if (!sandwich.getIngredients().isEmpty()) {
+            String joinedIngredients = TextUtils.join(", ", sandwich.getIngredients());
+            tv_ingredients.setText(joinedIngredients);
+        }
+        ;
 
 
     }

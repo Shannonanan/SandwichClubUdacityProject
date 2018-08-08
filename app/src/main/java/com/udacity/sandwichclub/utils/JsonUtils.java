@@ -12,10 +12,12 @@ import java.util.List;
 public class JsonUtils {
 
     private static Sandwich sandwich = new Sandwich();
-    private static List<String> ingredientsList = new ArrayList<>();
-    private static List<String> alsoKnownAsList = new ArrayList<>();
+
 
     public static Sandwich parseSandwichJson(String json) {
+
+          List<String> ingredientsList = new ArrayList<>();
+          List<String> alsoKnownAsList = new ArrayList<>();
         try {
             JSONObject jsonString = new JSONObject(json);
             JSONObject jsonString2 = jsonString.getJSONObject("name");
